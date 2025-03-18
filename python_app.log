@@ -1,0 +1,45 @@
+2025-03-15 18:22:12,939 - INFO - Iniciando o benchmark de algoritmos de ordenação.
+2025-03-15 18:22:13,814 - INFO - Endpoint de métricas disponível em http://localhost:8000/metrics
+2025-03-15 18:22:13,817 - INFO - Executando BubbleSort.
+2025-03-15 18:22:19,226 - INFO - Executando BubbleSort.
+2025-03-15 18:22:25,082 - INFO - Executando BubbleSort.
+2025-03-15 18:22:30,442 - INFO - BubbleSort: Tamanho=10000, Tempo médio=5541.62 ms, Comparações=49995000.0, Trocas=25083461.0
+2025-03-15 18:22:30,442 - INFO - Executando InsertionSort.
+2025-03-15 18:22:33,320 - INFO - Executando InsertionSort.
+2025-03-15 18:22:36,231 - INFO - Executando InsertionSort.
+2025-03-15 18:22:39,113 - INFO - InsertionSort: Tamanho=10000, Tempo médio=2890.47 ms, Comparações=25093457.0, Trocas=25093460.0
+2025-03-15 18:22:39,114 - INFO - Executando SelectionSort.
+2025-03-15 18:22:41,674 - INFO - Executando SelectionSort.
+2025-03-15 18:22:44,166 - INFO - Executando SelectionSort.
+2025-03-15 18:22:46,652 - INFO - SelectionSort: Tamanho=10000, Tempo médio=2512.64 ms, Comparações=49995000.0, Trocas=9990.0
+2025-03-15 18:22:46,652 - INFO - Executando QuickSort.
+2025-03-15 18:22:46,674 - INFO - Executando QuickSort.
+2025-03-15 18:22:46,696 - INFO - Executando QuickSort.
+2025-03-15 18:22:46,718 - INFO - QuickSort: Tamanho=10000, Tempo médio=21.90 ms, Comparações=160598.0, Trocas=82869.0
+2025-03-15 18:22:46,718 - INFO - Executando MergeSort.
+2025-03-15 18:22:46,754 - INFO - Executando MergeSort.
+2025-03-15 18:22:46,790 - INFO - Executando MergeSort.
+2025-03-15 18:22:46,825 - INFO - MergeSort: Tamanho=10000, Tempo médio=35.66 ms, Comparações=120396.0, Trocas=133616.0
+2025-03-15 18:22:46,825 - INFO - Executando TimSort (simplificado).
+2025-03-15 18:22:46,861 - INFO - Executando TimSort (simplificado).
+2025-03-15 18:22:46,896 - INFO - Executando TimSort (simplificado).
+2025-03-15 18:22:46,932 - INFO - TimSort: Tamanho=10000, Tempo médio=35.60 ms, Comparações=172329.0, Trocas=177563.0
+2025-03-15 18:22:46,933 - INFO - Executando HeapSort.
+2025-03-15 18:22:46,976 - INFO - Executando HeapSort.
+2025-03-15 18:22:47,020 - INFO - Executando HeapSort.
+2025-03-15 18:22:47,064 - INFO - HeapSort: Tamanho=10000, Tempo médio=43.69 ms, Comparações=235392.0, Trocas=124260.0
+2025-03-15 18:22:47,064 - INFO - Executando CountingSort.
+2025-03-15 18:22:47,080 - INFO - Executando CountingSort.
+2025-03-15 18:22:47,096 - INFO - Executando CountingSort.
+2025-03-15 18:22:47,112 - INFO - CountingSort: Tamanho=10000, Tempo médio=15.90 ms, Comparações=0.0, Trocas=10000.0
+2025-03-15 18:22:47,112 - INFO - Executando RadixSort.
+2025-03-15 18:22:47,133 - INFO - Executando RadixSort.
+2025-03-15 18:22:47,153 - INFO - Executando RadixSort.
+2025-03-15 18:22:47,173 - INFO - RadixSort: Tamanho=10000, Tempo médio=20.33 ms, Comparações=0.0, Trocas=100000.0
+2025-03-15 18:22:47,174 - INFO - Executando ShellSort.
+2025-03-15 18:22:47,212 - INFO - Executando ShellSort.
+2025-03-15 18:22:47,249 - INFO - Executando ShellSort.
+2025-03-15 18:22:47,286 - INFO - ShellSort: Tamanho=10000, Tempo médio=37.48 ms, Comparações=272723.0, Trocas=277801.0
+2025-03-15 18:52:47,905 - INFO - Iniciando o benchmark de algoritmos de ordenação.
+2025-03-15 18:52:48,811 - INFO - Endpoint de métricas disponível em http://localhost:8000/metrics
+2025-03-15 18:52:48,822 - INFO - Executando BubbleSort.
