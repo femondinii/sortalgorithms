@@ -1,4 +1,5 @@
 import csv
+import json
 from algorithms.bubble_sort import BubbleSort
 from algorithms.bubble_sort_optimized import BubbleSortOptimized
 from algorithms.counting_sort import CountingSort
@@ -11,6 +12,50 @@ from algorithms.shell_sort import ShellSort
 from algorithms.radix_sort import RadixSort
 from algorithms.tim_sort import TimSort
 from algorithms.sort_context import SortContext
+
+class BinarySearchWithCache:
+    def __init__(self, cache_file='search_cache.json'):
+        self.cache_file = cache_file
+        self.cache = self.load_cache()
+
+    def load_cache(self):
+        try:
+            with open(self.cache_file, 'r') as f:
+                return json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            return {}
+
+    def save_cache(self):
+        with open(self.cache_file, 'w') as f:
+            json.dump(self.cache, f)
+
+    def binary_search(self, arr, target, left=0, right=None):
+        if right is None:
+            right = len(arr) - 1
+
+        # Verifica o cache
+        if str(target) in self.cache:
+            return self.cache[str(target)]
+
+        if left > right:
+            self.cache[str(target)] = -1  # Armazena resultado no cache
+            self.save_cache()
+            return -1
+
+        mid = (left + right) // 2
+
+        if arr[mid] == target:
+            self.cache[str(target)] = mid  # Armazena resultado no cache
+            self.save_cache()
+            return mid
+        elif arr[mid] < target:
+            result = self.binary_search(arr, target, mid + 1, right)
+        else:
+            result = self.binary_search(arr, target, left, mid - 1)
+        
+        self.cache[str(target)] = result  # Armazena resultado no cache
+        self.save_cache()
+        return result
 
 def read_numbers(file):
     with open(file, 'r') as f:
@@ -55,5 +100,14 @@ if __name__ == "__main__":
         context.execute_sort(numbers)
         save_numbers(f'results/{name_method}.csv', numbers)
         print(f"Arquivo {name_method}.csv gerado com sucesso!")
+
+        # Teste de busca binária com cache
+        searcher = BinarySearchWithCache()
+        target = int(input("Digite um número para buscar: "))
+        index = searcher.binary_search(numbers, target)
+        if index != -1:
+            print(f"Número encontrado na posição {index}.")
+        else:
+            print("Número não encontrado.")
     else:
         print("Opção inválida!")
